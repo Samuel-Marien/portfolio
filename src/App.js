@@ -2,6 +2,7 @@ import React from 'react'
 import './App.css'
 
 import NavBar from './components/NavBar'
+import FastPrez from './components/FastPrez'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       }}
     >
       <NavBar />
+      <FastPrez />
     </div>
   )
 }

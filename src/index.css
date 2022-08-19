@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css?family=Pirata+One|Rubik:900');
 
 .myNavbar-enter {
   opacity: 0;
@@ -19,4 +20,30 @@
   opacity: 0;
   transform: translateY(-100%);
   transition: opacity 500ms, transform 500ms;
+}
+
+.animate-charcter {
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #0f172a 0%,
+    #44107a 29%,
+    #ef4444 67%,
+    #fecaca 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 4s linear infinite;
+  display: inline-block;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
 }

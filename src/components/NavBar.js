@@ -8,8 +8,8 @@ const MyLink = (props) => {
     <a
       href={href}
       className="block mt-4 lg:inline-block lg:mt-0 text-slate-500 pr-16 mr-4 pb-1
-      hover:text-slate-300 focus:text-red-600 hover:animate-pulse hover:scale-110 hover:font-bold
-      transition-all duration-500"
+      hover:text-slate-300 focus:text-red-400 hover:animate-pulse hover:scale-110 hover:font-bold
+      transition-all duration-200"
     >
       {title}
     </a>
