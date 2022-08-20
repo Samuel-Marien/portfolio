@@ -47,3 +47,9 @@
     background-position: 200% center;
   }
 }
+
+@media (max-width: 1920px) {
+  .test {
+    height: '200px';
+  }
+}

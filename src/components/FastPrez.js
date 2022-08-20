@@ -22,7 +22,7 @@ SocialLink.propTypes = {
 
 const FastPrez = () => {
   return (
-    <div className="text-slate-300 mt-5 ml-5 md:mt-56 md:ml-48">
+    <div className="text-slate-300">
       <div className="animate-charcter text-6xl font-black">
         <span>Samuel Marien</span>
       </div>
