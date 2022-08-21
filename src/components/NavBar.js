@@ -54,7 +54,7 @@ const NavBar = () => {
           <div className="w-full block lg:hidden ">
             <div className="text-sm lg:flex-grow ">
               <MyLink title="Home" href="/" />
-              <MyLink title="About" href="/" />
+              <MyLink title="About" href="#about" />
               <MyLink title="Skills" href="/" />
               <MyLink title="Works" href="/" />
               <MyLink title="Contact" href="/" />
@@ -67,7 +67,7 @@ const NavBar = () => {
       <div className="w-full hidden flex-grow lg:flex lg:items-center lg:w-auto ">
         <div className="text-sm lg:flex-grow">
           <MyLink title="Home" href="/" />
-          <MyLink title="About" href="/" />
+          <MyLink title="About" href="#about" />
           <MyLink title="Skills" href="/" />
           <MyLink title="Works" href="/" />
           <MyLink title="Contact" href="/" />
