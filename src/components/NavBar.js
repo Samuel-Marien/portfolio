@@ -23,6 +23,18 @@ MyLink.propTypes = {
   href: PropTypes.string
 }
 
+const LinksDisplayer = () => {
+  return (
+    <div className="text-sm lg:flex-grow ">
+      <MyLink title="Home" href="/" />
+      <MyLink title="About" href="#about" />
+      <MyLink title="Skills" href="#skills" />
+      <MyLink title="Works" href="#works" />
+      <MyLink title="Contact" href="#contact" />
+    </div>
+  )
+}
+
 const NavBar = () => {
   const [show, setShow] = useState(false)
   const [showButton, setShowButton] = useState(true)
@@ -52,25 +64,17 @@ const NavBar = () => {
       >
         {show ? (
           <div className="w-full block lg:hidden ">
-            <div className="text-sm lg:flex-grow ">
-              <MyLink title="Home" href="/" />
-              <MyLink title="About" href="#about" />
-              <MyLink title="Skills" href="/" />
-              <MyLink title="Works" href="/" />
-              <MyLink title="Contact" href="/" />
-            </div>
+            <LinksDisplayer />
           </div>
-        ) : null}
+        ) : (
+          <div></div>
+        )}
       </CSSTransition>
 
       {/* desktop navbar  */}
       <div className="w-full hidden flex-grow lg:flex lg:items-center lg:w-auto ">
         <div className="text-sm lg:flex-grow">
-          <MyLink title="Home" href="/" />
-          <MyLink title="About" href="#about" />
-          <MyLink title="Skills" href="/" />
-          <MyLink title="Works" href="/" />
-          <MyLink title="Contact" href="/" />
+          <LinksDisplayer />
         </div>
       </div>
     </nav>

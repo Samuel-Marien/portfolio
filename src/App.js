@@ -23,13 +23,21 @@ function App() {
         <div className="flex flex-col mt-5 ml-5 md:mt-56 md:ml-48">
           <FastPrez />
           <div className="absolute bottom-5 left-5 md:left-48">
-            <ScrollButton />
+            <ScrollButton mode="Down" href="#about" />
           </div>
         </div>
       </div>
       <div className="h-screen border border-blue-500">
+        <div className="mt-5 ml-5  md:ml-48">
+          <ScrollButton mode="up" href="#" />
+        </div>
         <div className=" ml-5 md:ml-48" id="about">
           <About />
+          <div className="relative h-48">
+            <div className="absolute bottom-0 " style={{}}>
+              <ScrollButton mode="Down" href="#about" />
+            </div>
+          </div>
         </div>
       </div>
     </div>

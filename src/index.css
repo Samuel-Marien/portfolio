@@ -47,3 +47,13 @@
     background-position: 200% center;
   }
 }
+
+.skewed {
+  width: 1500px;
+  transform: skew(-4deg) rotate(4deg);
+  overflow: hidden;
+}
+
+.skewed > img {
+  transform: skew(4deg) rotate(-4deg);
+}
