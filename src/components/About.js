@@ -4,22 +4,24 @@ import MovingText from 'react-moving-text'
 import useOnScreen from '../hooks/useOnScreen'
 import profil from './profil1.jpg'
 
+import Mypdf from '../CV_Marien_Samuel_FS.pdf'
+
 const About = () => {
   const ref = useRef()
   const isVisible = useOnScreen(ref)
   console.log(isVisible)
 
   return (
-    <div className="flex mt-28">
-      <div className="skewed mt-10 border-4 border-white border-dotted">
+    <div className="flex flex-col md:flex-row items-center md:mt-28">
+      <div className="skewed mt-10 border-4 border-white border-dotted ml-3 md:ml-0">
         <img
           src={profil}
           alt="profil"
           className="grayscale border-4 border-black border-dotted"
         />
       </div>
-      <div className="p-10 pl-20 flex flex-col justify-center">
-        <div className="text-4xl font-bold text-red-500 uppercase">
+      <div className="p-1 md:p-10 pl-0 md:pl-20 mt-3 md:mt-0 flex flex-col justify-center ">
+        <div className="text-3xl md:text-4xl font-bold text-red-500 uppercase flex justify-center md:justify-start">
           <span ref={ref}>
             {isVisible && (
               <div className="flex">
@@ -32,7 +34,7 @@ const About = () => {
                   fillMode="none"
                   iteration={1}
                 >
-                  <span>About</span>
+                  <span>À</span>
                 </MovingText>
                 <MovingText
                   type="slideInFromBottom"
@@ -43,7 +45,7 @@ const About = () => {
                   fillMode="none"
                   iteration={1}
                 >
-                  <span className="ml-3">M</span>
+                  <span className="ml-3">propos</span>
                 </MovingText>
                 <MovingText
                   type="slideInFromTop"
@@ -54,7 +56,7 @@ const About = () => {
                   fillMode="none"
                   iteration={1}
                 >
-                  <span className="">e</span>
+                  <span className="ml-3">de moi</span>
                 </MovingText>
               </div>
             )}
@@ -63,7 +65,9 @@ const About = () => {
 
         <p
           ref={ref}
-          className="text-slate-700 mt-10 text-xl md:w-9/12 tracking-widest leading-9"
+          className="text-slate-700 md:mt-10 
+          text-base md:w-9/12 md:tracking-widest leading-6 
+          md:leading-9 text-justify p-4 md:p-0"
         >
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industrys standard dummy text ever
@@ -83,15 +87,17 @@ const About = () => {
             fillMode="none"
             iteration={1}
           >
-            <div>
+            <a href={Mypdf} download="CV_Marien_Samuel_FS.pdf">
               <button
-                className="mt-10 py-2 px-4 bg-slate-800 text-white rounded shadow-xl
-          hover:shadow-inner hover:bg-white hover:text-slate-800 hover:font-bold
-          transition-all duration-300 "
+                ref={ref}
+                className="mt-5 py-2 px-6 bg-slate-800 text-white 
+                rounded shadow-xl hover:bg-white hover:text-slate-800
+                 transition-all duration-400 w-full md:w-max hover:shadow-md
+                 active:bg-slate-400 active:text-white active:shadow-none"
               >
-                Download CV
+                Télécharger CV
               </button>
-            </div>
+            </a>
           </MovingText>
         )}
       </div>

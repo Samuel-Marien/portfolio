@@ -49,11 +49,17 @@
 }
 
 .skewed {
-  width: 1500px;
+  width: 2000px;
   transform: skew(-4deg) rotate(4deg);
   overflow: hidden;
 }
 
 .skewed > img {
   transform: skew(4deg) rotate(-4deg);
+}
+
+@media screen and (max-width: 768px) {
+  .skewed {
+    width: 65%;
+  }
 }

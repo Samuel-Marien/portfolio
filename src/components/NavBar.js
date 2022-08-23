@@ -44,10 +44,7 @@ const NavBar = () => {
       {/* responsive button  */}
       {showButton && (
         <div className="block lg:hidden">
-          <button
-            onClick={() => setShow(true)}
-            className="text-2xl text-slate-400"
-          >
+          <button onClick={() => setShow(true)} className=" text-slate-400">
             <BsMenuUp />
           </button>
         </div>

@@ -9,6 +9,7 @@ import About from './components/About'
 function App() {
   return (
     <div
+      className="test"
       style={{
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -28,16 +29,13 @@ function App() {
         </div>
       </div>
       <div className="h-screen border border-blue-500">
-        <div className="mt-5 ml-5  md:ml-48">
-          <ScrollButton mode="up" href="#" />
-        </div>
-        <div className=" ml-5 md:ml-48" id="about">
+        <div className="p-2 md:p-0 ml-0 md:ml-48" id="about">
           <About />
-          <div className="relative h-48">
-            <div className="absolute bottom-0 " style={{}}>
+          {/* <div className="relative">
+            <div className="absolute bottom-0 md:-bottom-20 " style={{}}>
               <ScrollButton mode="Down" href="#about" />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
