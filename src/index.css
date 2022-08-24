@@ -67,10 +67,17 @@
   transform: skew(-4deg) rotate(4deg);
 }
 
+.skewed__works {
+  width: 2000px;
+}
+
 @media screen and (max-width: 1024px) {
   .skewed,
   .skewed__skills {
     width: 65%;
+  }
+  .skewed__works {
+    width: 35%;
   }
 }
 

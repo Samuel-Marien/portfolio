@@ -6,6 +6,7 @@ import FastPrez from './components/FastPrez'
 import ScrollButton from './components/ScrollButton'
 import About from './components/About'
 import Skills from './components/Skills'
+import Works from './components/Works'
 
 function App() {
   return (
@@ -51,8 +52,13 @@ function App() {
             <div className="relative"></div>
           </div>
         </div>
-        <div className="ml-5 lg:ml-48 -translate-y-16">
-          <ScrollButton mode="Down" href="#works" />
+      </div>
+      <div className="ml-5 lg:ml-48 -translate-y-16">
+        <ScrollButton mode="Down" href="#works" />
+      </div>
+      <div className="h-screen">
+        <div className="p-2 md:p-0 ml-2" id="works">
+          <Works />
         </div>
       </div>
     </div>

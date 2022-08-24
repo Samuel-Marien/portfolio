@@ -26,10 +26,10 @@ MyLink.propTypes = {
 const LinksDisplayer = () => {
   return (
     <div className="text-sm lg:flex-grow ">
-      <MyLink title="Home" href="/" />
-      <MyLink title="About" href="#about" />
-      <MyLink title="Skills" href="#skills" />
-      <MyLink title="Works" href="#works" />
+      <MyLink title="Accueil" href="/" />
+      <MyLink title="A propos" href="#about" />
+      <MyLink title="Compétences" href="#skills" />
+      <MyLink title="Projets" href="#works" />
       <MyLink title="Contact" href="#contact" />
     </div>
   )

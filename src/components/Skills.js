@@ -1,14 +1,13 @@
 import React, { useRef } from 'react'
-import PropTypes from 'prop-types'
 import MovingText from 'react-moving-text'
 
 import useOnScreen from '../hooks/useOnScreen'
 import skillsPic from './skills2.jpg'
+import MyIcon from './MyIcon'
 
 import {
   DiHtml5,
   DiCss3,
-  // DiJsBadge,
   DiNodejsSmall,
   DiReact,
   DiBootstrap,
@@ -19,41 +18,14 @@ import { SiTailwindcss, SiNotion, SiExpress } from 'react-icons/si'
 import { FaFigma, FaGithub } from 'react-icons/fa'
 import { TbApi, TbBrandJavascript } from 'react-icons/tb'
 
-const MyIcon = (props) => {
-  const { icon, type, duration } = props
-  return (
-    <MovingText
-      type={type}
-      duration={duration}
-      delay="0s"
-      direction="normal"
-      timing="ease-in"
-      fillMode="none"
-      iteration={1}
-    >
-      <div className="m-2 md:m-3">
-        <span className="text-4xl md:text-7xl text-slate-800">{icon}</span>
-      </div>
-    </MovingText>
-  )
-}
-MyIcon.propTypes = {
-  icon: PropTypes.element,
-  type: PropTypes.string,
-  duration: PropTypes.string
-}
-
 const Skills = () => {
   const ref = useRef()
   const isVisible = useOnScreen(ref)
   // console.log(isVisible)
   return (
-    <div className="flex flex-col lg:flex-row">
+    <div ref={ref} className="flex flex-col lg:flex-row">
       <div className="p-1 md:p-10 pl-0  mt-3 md:mt-0 flex flex-col lg:w-7/12">
-        <div
-          ref={ref}
-          className="text-3xl md:text-4xl font-bold text-red-500 uppercase flex justify-center md:justify-start"
-        >
+        <div className="text-3xl md:text-4xl font-bold text-red-500 uppercase flex justify-center md:justify-start">
           <span>
             {isVisible && (
               <div className="flex">
@@ -66,7 +38,7 @@ const Skills = () => {
                   fillMode="none"
                   iteration={1}
                 >
-                  <span>S</span>
+                  <span>Com</span>
                 </MovingText>
                 <MovingText
                   type="slideInFromBottom"
@@ -77,7 +49,7 @@ const Skills = () => {
                   fillMode="none"
                   iteration={1}
                 >
-                  <span className="">kill</span>
+                  <span className="">pétence</span>
                 </MovingText>
                 <MovingText
                   type="slideInFromTop"
@@ -197,7 +169,7 @@ const Skills = () => {
           </div>
         )}
       </div>
-      <div className="skewed__skills hidden lg:block mt-10 border-4 border-white border-dotted ml-3 md:ml-0">
+      <div className="skewed__skills hidden lg:block mt-10 border-8 border-white border-dotted ml-3 md:ml-0">
         <img
           src={skillsPic}
           alt="profil"
