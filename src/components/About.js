@@ -9,10 +9,10 @@ import Mypdf from '../CV_Marien_Samuel_FS.pdf'
 const About = () => {
   const ref = useRef()
   const isVisible = useOnScreen(ref)
-  console.log(isVisible)
+  // console.log(isVisible)
 
   return (
-    <div className="flex flex-col md:flex-row items-center md:mt-28">
+    <div className="flex flex-col lg:flex-row items-center md:mt-28">
       <div className="skewed mt-10 border-4 border-white border-dotted ml-3 md:ml-0">
         <img
           src={profil}
@@ -20,7 +20,7 @@ const About = () => {
           className="grayscale border-4 border-black border-dotted"
         />
       </div>
-      <div className="p-1 md:p-10 pl-0 md:pl-20 mt-3 md:mt-0 flex flex-col justify-center ">
+      <div className="p-1 md:p-10 pl-0 lg:pl-20 mt-3 md:mt-0 flex flex-col justify-center ">
         <div className="text-3xl md:text-4xl font-bold text-red-500 uppercase flex justify-center md:justify-start">
           <span ref={ref}>
             {isVisible && (
@@ -66,7 +66,7 @@ const About = () => {
         <p
           ref={ref}
           className="text-slate-700 md:mt-10 
-          text-base md:w-9/12 md:tracking-widest leading-6 
+          text-base lg:w-9/12 md:tracking-widest leading-6 
           md:leading-9 text-justify p-4 md:p-0"
         >
           Lorem Ipsum is simply dummy text of the printing and typesetting

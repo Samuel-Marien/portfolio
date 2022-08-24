@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css?family=Pirata+One|Rubik:900');
 
 .myNavbar-enter {
   opacity: 0;
@@ -58,8 +57,30 @@
   transform: skew(4deg) rotate(-4deg);
 }
 
-@media screen and (max-width: 768px) {
-  .skewed {
+.skewed__skills {
+  width: 500px;
+  transform: skew(4deg) rotate(-4deg);
+  overflow: hidden;
+}
+
+.skewed__skills > img {
+  transform: skew(-4deg) rotate(4deg);
+}
+
+@media screen and (max-width: 1024px) {
+  .skewed,
+  .skewed__skills {
     width: 65%;
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  .skewed__skills {
+    width: 25%;
+    transform: skew(0deg) rotate(0deg);
+  }
+  .skewed__skills > img {
+    transform: skew(0deg) rotate(0deg);
+    margin: 60px;
   }
 }

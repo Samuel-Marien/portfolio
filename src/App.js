@@ -5,11 +5,11 @@ import NavBar from './components/NavBar'
 import FastPrez from './components/FastPrez'
 import ScrollButton from './components/ScrollButton'
 import About from './components/About'
+import Skills from './components/Skills'
 
 function App() {
   return (
     <div
-      className="test"
       style={{
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -20,22 +20,39 @@ function App() {
       }}
     >
       <NavBar />
-      <div className="h-screen border border-red-500">
+      <div className="h-screen">
         <div className="flex flex-col mt-5 ml-5 md:mt-56 md:ml-48">
           <FastPrez />
-          <div className="absolute bottom-5 left-5 md:left-48">
+          <div className="absolute bottom-5 left-5 lg:left-48 ">
             <ScrollButton mode="Down" href="#about" />
           </div>
         </div>
       </div>
-      <div className="h-screen border border-blue-500">
-        <div className="p-2 md:p-0 ml-0 md:ml-48" id="about">
-          <About />
-          {/* <div className="relative">
-            <div className="absolute bottom-0 md:-bottom-20 " style={{}}>
-              <ScrollButton mode="Down" href="#about" />
-            </div>
-          </div> */}
+      <div
+        className=""
+        style={{
+          backgroundSize: '40%',
+          backgroundPosition: 'bottom right',
+          backgroundRepeat: 'no-repeat',
+          backgroundImage: 'url(images/bgSkills.png)'
+        }}
+      >
+        <div className="h-screen">
+          <div className="p-2 md:p-0 ml-0 lg:ml-48" id="about">
+            <About />
+          </div>
+        </div>
+        <div className="ml-5 lg:ml-48 -translate-y-16">
+          <ScrollButton mode="Down" href="#skills" />
+        </div>
+        <div className="h-screen ">
+          <div className="p-2 md:p-0 ml-0 lg:ml-48" id="skills">
+            <Skills />
+            <div className="relative"></div>
+          </div>
+        </div>
+        <div className="ml-5 lg:ml-48 -translate-y-16">
+          <ScrollButton mode="Down" href="#works" />
         </div>
       </div>
     </div>

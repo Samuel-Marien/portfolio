@@ -60,7 +60,10 @@ const NavBar = () => {
         onExited={() => setShowButton(true)}
       >
         {show ? (
-          <div className="w-full block lg:hidden ">
+          <div
+            className="w-full block lg:hidden "
+            onClick={() => setShow(false)}
+          >
             <LinksDisplayer />
           </div>
         ) : (
