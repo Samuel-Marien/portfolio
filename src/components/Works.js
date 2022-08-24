@@ -1,24 +1,49 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
+import PropTypes from 'prop-types'
 import MovingText from 'react-moving-text'
 
 import useOnScreen from '../hooks/useOnScreen'
-import iptracker from './iptracker.png'
+// import iptracker from './iptracker.png'
 import MyIcon from './MyIcon'
+import myProjects from '../misc/projectsArray'
 
 import { DiReact, DiCode } from 'react-icons/di'
 import { SiTailwindcss } from 'react-icons/si'
 import { TbBrandJavascript, TbApi } from 'react-icons/tb'
 import { IoEarth } from 'react-icons/io5'
 
+console.log(myProjects)
+
+const MySelectorButton = (props) => {
+  const { title, onClick } = props
+  return (
+    <button
+      onClick={onClick}
+      className="focus:bg-white focus:text-slate-500 mr-3 cursor-pointer p-2 px-4 font-bold text-xl bg-slate-500 text-white shadow rounded-full"
+    >
+      {title}
+    </button>
+  )
+}
+MySelectorButton.propTypes = {
+  title: PropTypes.string,
+  onClick: PropTypes.func
+}
+
 const Works = () => {
+  const [projectSelected, setProjectSelected] = useState(0)
+
+  console.log(projectSelected)
+
   const ref = useRef()
   const isVisible = useOnScreen(ref)
-  console.log(isVisible)
+  // console.log(isVisible)
+
   return (
     <div ref={ref} className="flex flex-col lg:flex-row items-center">
       <div className="skewed__works mt-1 md:mt-10 ml-3 md:ml-0 shadow-xl rounded-lg">
         <img
-          src={iptracker}
+          src={myProjects[0].image}
           alt="profil"
           className="grayscale hover:grayscale-0 rounded-lg transition-all duration-500"
         />
@@ -65,8 +90,16 @@ const Works = () => {
             )}
           </span>
         </div>
+        <div className="flex mt-5">
+          <MySelectorButton title="1" onClick={() => setProjectSelected(0)} />
+          <MySelectorButton title="2" onClick={() => setProjectSelected(1)} />
+          <MySelectorButton title="3" onClick={() => setProjectSelected(2)} />
+          <MySelectorButton title="4" onClick={() => setProjectSelected(3)} />
+        </div>
         <div className="flex flex-col">
-          <p className="md:mt-16 mb-2 font-bold text-slate-500">Subtitle</p>
+          <div className="md:mt-8 mb-2 font-bold text-slate-500">
+            {myProjects[projectSelected].title}
+          </div>
           <p className="text-slate-700  text-base lg:w-9/12 md:tracking-widest leading-6 md:leading-9 text-justify p-4 md:p-0">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industrys standard dummy text
@@ -75,7 +108,7 @@ const Works = () => {
         </div>
         <div className="flex flex-col mt-10 border rounded-2xl px-0 md:px-8 bg-white">
           <p className=" mx-auto px-8 md:px-16 w-max text-slate-700 text-center font-black text-2xl bg-white -translate-y-5">
-            Stack technique
+            Stack
           </p>
           {isVisible && (
             <div className="flex justify-around">
@@ -102,7 +135,7 @@ const Works = () => {
             </div>
           )}
         </div>
-        <div className="text-slate-500 flex justify-between mt-24 font-bold text-xl  w-7/12">
+        <div className="text-slate-500 flex mt-24 font-bold text-xl">
           <a
             target="_blank"
             href="https://ip-tracker-dbfta26z5-samuel-marien.vercel.app/"
