@@ -1,8 +1,8 @@
 import React, { useRef } from 'react'
-import MovingText from 'react-moving-text'
 
 import useOnScreen from '../hooks/useOnScreen'
-import skillsPic from './skills2.jpg'
+import MyAnimateTitle from './MyAnimateTitle'
+import skillsPic from './assets/skills2.jpg'
 import MyIcon from './MyIcon'
 
 import {
@@ -21,48 +21,14 @@ import { TbApi, TbBrandJavascript } from 'react-icons/tb'
 const Skills = () => {
   const ref = useRef()
   const isVisible = useOnScreen(ref)
-  // console.log(isVisible)
+
   return (
     <div ref={ref} className="flex flex-col lg:flex-row">
       <div className="p-1 md:p-10 pl-0  mt-3 md:mt-0 flex flex-col lg:w-7/12">
         <div className="text-3xl md:text-4xl font-bold text-red-500 uppercase flex justify-center md:justify-start">
           <span>
             {isVisible && (
-              <div className="flex">
-                <MovingText
-                  type="slideInFromLeft"
-                  duration="900ms"
-                  delay="0s"
-                  direction="normal"
-                  timing="ease-in"
-                  fillMode="none"
-                  iteration={1}
-                >
-                  <span>Com</span>
-                </MovingText>
-                <MovingText
-                  type="slideInFromBottom"
-                  duration="1800ms"
-                  delay="0s"
-                  direction="normal"
-                  timing="ease"
-                  fillMode="none"
-                  iteration={1}
-                >
-                  <span className="">pétence</span>
-                </MovingText>
-                <MovingText
-                  type="slideInFromTop"
-                  duration="2700ms"
-                  delay="0s"
-                  direction="normal"
-                  timing="ease"
-                  fillMode="none"
-                  iteration={1}
-                >
-                  <span className="">s</span>
-                </MovingText>
-              </div>
+              <MyAnimateTitle part1="Com" part2="pétence" part3="s" />
             )}
           </span>
         </div>

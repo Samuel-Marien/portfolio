@@ -2,14 +2,14 @@ import React, { useRef } from 'react'
 import MovingText from 'react-moving-text'
 
 import useOnScreen from '../hooks/useOnScreen'
-import profil from './profil1.jpg'
+import MyAnimateTitle from './MyAnimateTitle'
+import profil from './assets/profil1.jpg'
 
 import Mypdf from '../CV_Marien_Samuel_FS.pdf'
 
 const About = () => {
   const ref = useRef()
   const isVisible = useOnScreen(ref)
-  // console.log(isVisible)
 
   return (
     <div className="flex flex-col lg:flex-row items-center md:mt-28">
@@ -24,41 +24,12 @@ const About = () => {
         <div className="text-3xl md:text-4xl font-bold text-red-500 uppercase flex justify-center md:justify-start">
           <span ref={ref}>
             {isVisible && (
-              <div className="flex">
-                <MovingText
-                  type="slideInFromLeft"
-                  duration="900ms"
-                  delay="0s"
-                  direction="normal"
-                  timing="ease-in"
-                  fillMode="none"
-                  iteration={1}
-                >
-                  <span>À</span>
-                </MovingText>
-                <MovingText
-                  type="slideInFromBottom"
-                  duration="1800ms"
-                  delay="0s"
-                  direction="normal"
-                  timing="ease"
-                  fillMode="none"
-                  iteration={1}
-                >
-                  <span className="ml-3">propos</span>
-                </MovingText>
-                <MovingText
-                  type="slideInFromTop"
-                  duration="2700ms"
-                  delay="0s"
-                  direction="normal"
-                  timing="ease"
-                  fillMode="none"
-                  iteration={1}
-                >
-                  <span className="ml-3">de moi</span>
-                </MovingText>
-              </div>
+              <MyAnimateTitle
+                part1="À"
+                part2="propos"
+                part3="de moi"
+                classOption="mr-2"
+              />
             )}
           </span>
         </div>
