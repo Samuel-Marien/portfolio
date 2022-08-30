@@ -22,7 +22,7 @@ const MySelectorButton = (props) => {
   )
 }
 MySelectorButton.propTypes = {
-  title: PropTypes.string,
+  title: PropTypes.number,
   onClick: PropTypes.func
 }
 
@@ -33,7 +33,7 @@ const MyButton = (props) => {
       target="_blank"
       href={href}
       className={`${className} text-base md:text-xl mr-5 cursor-pointer flex items-center hover:bg-slate-500 
-      hover:text-white hover:shadow-lg transition-all duration-500 rounded-lg md:px-4 md:py-2 px-2`}
+      hover:text-white hover:shadow-lg transition-all duration-500 rounded-lg md:px-4 md:py-2 px-2 shadow`}
       rel="noreferrer"
     >
       <span className={`${iconClass} mr-2`}>{icon}</span>
@@ -56,31 +56,39 @@ const Works = () => {
   const isVisible = useOnScreen(ref)
 
   return (
-    <div ref={ref} className="flex flex-col lg:flex-row items-center">
-      <div className="skewed__works mt-1 md:mt-10 ml-3 md:ml-0 shadow-xl rounded-lg">
+    <div
+      ref={ref}
+      className="grid grid-cols-1 xl:grid-cols-2 gap-3 md:gap-1 lg:gap-10"
+    >
+      <div className="works rounded-lg mx-auto mt-2 lg:mt-16 lg:ml-16">
         <img
           src={myProjects[projectSelected].image}
           alt="profil"
-          className="grayscale hover:grayscale-0 rounded-lg transition-all duration-500"
+          className="grayscale hover:grayscale-0 rounded-lg transition-all duration-500 shadow-xl"
         />
       </div>
-      <div className="p-1 md:p-10 pl-0 lg:pl-20 mt-2 md:mt-0 flex flex-col justify-center ">
-        <div className="text-3xl md:text-4xl font-bold text-red-500 uppercase flex justify-center md:justify-start">
+      <div className=" md:px-6 mt-2 lg:mt-14 flex flex-col justify-center">
+        <div className="text-3xl md:text-4xl font-bold text-red-500 uppercase flex justify-center lg:justify-start">
           <span>
             {isVisible && <MyAnimateTitle part1="P" part2="rojet" part3="s" />}
           </span>
         </div>
-        <div className="flex justify-between w-6/12 mx-auto md:mx-0 mt-2 md:mt-5">
-          <MySelectorButton title="1" onClick={() => setProjectSelected(0)} />
-          <MySelectorButton title="2" onClick={() => setProjectSelected(1)} />
-          <MySelectorButton title="3" onClick={() => setProjectSelected(2)} />
-          <MySelectorButton title="4" onClick={() => setProjectSelected(3)} />
+        <div className="flex justify-between w-6/12 md:w-4/12 mx-auto md:mx-0 mt-2 md:mt-5">
+          {myProjects.map((_item, index) => {
+            return (
+              <MySelectorButton
+                key={index}
+                title={index + 1}
+                onClick={() => setProjectSelected(index)}
+              />
+            )
+          })}
         </div>
-        <div className="flex flex-col p-2 md:p-0 mt-2 md:mt-0">
+        <div className="flex flex-col  h-full p-2 md:p-0 mt-2 md:mt-0 ">
           <div className="md:mt-8 font-bold text-slate-500 text-xl">
             {myProjects[projectSelected].title}
           </div>
-          <p className="text-slate-700  text-base lg:w-9/12 md:tracking-widest leading-6 md:leading-9 text-justify mt-2">
+          <p className="text-slate-700 text-base lg:w-9/12 md:tracking-widest leading-6 md:leading-9 text-justify mt-2">
             {myProjects[projectSelected].description}
           </p>
         </div>
@@ -103,7 +111,7 @@ const Works = () => {
             </div>
           )}
         </div>
-        <div className="text-slate-500 flex mt-24 font-bold text-xl">
+        <div className="text-slate-500 flex mt-10 font-bold text-xl">
           {myProjects[projectSelected].linkSite && (
             <MyButton
               href={myProjects[projectSelected].linkSite}

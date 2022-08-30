@@ -67,19 +67,16 @@
   transform: skew(-4deg) rotate(4deg);
 }
 
-.skewed__works {
-  width: 2000px;
-}
-
 @media screen and (max-width: 1024px) {
   .skewed,
   .skewed__skills {
     width: 65%;
   }
-  .skewed__works {
-    width: 75%;
-  }
 }
+
+/* .works {
+  height: 800px;
+} */
 
 @media screen and (max-width: 1220px) {
   .skewed__skills {
@@ -89,5 +86,16 @@
   .skewed__skills > img {
     transform: skew(0deg) rotate(0deg);
     margin: 60px;
+  }
+  .works {
+    width: 75%;
+    height: 475px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .works {
+    width: 80%;
+    height: 210px;
   }
 }

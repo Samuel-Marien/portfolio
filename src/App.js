@@ -57,7 +57,7 @@ function App() {
         <ScrollButton mode="Down" href="#works" />
       </div>
       <div className="h-screen">
-        <div className="p-2 md:p-0 ml-2" id="works">
+        <div className="p-2 md:p-0" id="works">
           <Works />
         </div>
       </div>

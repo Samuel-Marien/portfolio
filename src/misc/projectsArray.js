@@ -14,7 +14,7 @@ const myProjects = [
     image: iptracker,
     title: 'Ip Tracker',
     description:
-      'Ip Tracker : Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took.',
+      'Ip Tracker : Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     linkCode: 'https://github.com/Samuel-Marien/ip-tracker',
     linkSite: 'https://ip-tracker-dbfta26z5-samuel-marien.vercel.app/',
     techArray: [
@@ -36,7 +36,7 @@ const myProjects = [
     image: memory,
     title: 'Memory game',
     description:
-      'Memory game : Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took.',
+      'Memory game : Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     linkCode: 'https://github.com/Samuel-Marien/memory',
     linkSite: 'https://memory-lime.vercel.app/',
     techArray: [
@@ -63,7 +63,7 @@ const myProjects = [
     image: acnh,
     title: 'AcnH Ultimate DB',
     description:
-      'AcnH Ultimate DB : Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took.',
+      'AcnH Ultimate DB : Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     linkCode: 'https://github.com/Samuel-Marien/redwood-acnh-DB',
     linkSite: 'https://ayhan-island.netlify.app/',
     techArray: [
@@ -91,7 +91,7 @@ const myProjects = [
     image: portfolio,
     title: 'Portfolio',
     description:
-      'Portfolio : Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took.',
+      'Portfolio : Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     linkCode: 'https://github.com/Samuel-Marien/portfolio',
     linkSite: null,
     techArray: [
