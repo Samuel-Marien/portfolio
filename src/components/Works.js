@@ -32,7 +32,7 @@ const MyButton = (props) => {
     <a
       target="_blank"
       href={href}
-      className={`${className} text-base md:text-xl mr-5 cursor-pointer flex items-center hover:bg-slate-500 
+      className={`${className} text-base md:text-xl mr-5 cursor-pointer flex items-center bg-white hover:bg-slate-500 
       hover:text-white hover:shadow-lg transition-all duration-500 rounded-lg md:px-4 md:py-2 px-2 shadow`}
       rel="noreferrer"
     >

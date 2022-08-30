@@ -56,9 +56,19 @@ function App() {
       <div className="ml-5 lg:ml-48 -translate-y-16">
         <ScrollButton mode="Down" href="#works" />
       </div>
-      <div className="h-screen">
-        <div className="p-2 md:p-0" id="works">
-          <Works />
+      <div
+        className=""
+        style={{
+          backgroundSize: '25%',
+          backgroundPosition: 'bottom left',
+          backgroundRepeat: 'no-repeat',
+          backgroundImage: 'url(images/bgWorks.png)'
+        }}
+      >
+        <div className="h-screen">
+          <div className="p-2 md:p-0" id="works">
+            <Works />
+          </div>
         </div>
       </div>
     </div>
