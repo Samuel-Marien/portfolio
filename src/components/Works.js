@@ -60,7 +60,7 @@ const Works = () => {
       ref={ref}
       className="grid grid-cols-1 xl:grid-cols-2 gap-3 md:gap-1 lg:gap-10"
     >
-      <div className="works rounded-lg mx-auto mt-2 lg:mt-16 lg:ml-16">
+      <div className="works rounded-lg mx-auto mt-2 xl:mt-16 xl:ml-16">
         <img
           src={myProjects[projectSelected].image}
           alt="profil"

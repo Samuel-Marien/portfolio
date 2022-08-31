@@ -13,8 +13,9 @@ const MySubmitButton = (props) => {
   const { title, icon, className, iconClass } = props
   return (
     <div
-      className="text-white hover:text-slate-800 bg-slate-800 hover:bg-white cursor-pointer
-       hover:shadow-lg transition-all duration-500 rounded-lg md:px-6 md:py-2 px-2 w-max"
+      className="text-white hover:text-slate-800 bg-slate-800 hover:bg-white 
+      cursor-pointer hover:shadow-lg transition-all duration-500 rounded-lg md:px-6 
+      md:py-2 px-3 py-1 mt-8 xl:mt-0 w-full sm:w-max flex justify-center"
     >
       <button
         type="submit"
@@ -113,10 +114,10 @@ const Contact = () => {
         backgroundImage: 'url(images/bgContact.png)'
       }}
     >
-      <div className="bg-white mx-48 p-10 mt-36">
+      <div className="bg-white mx-5 md:mx-16 lg:mx-48 p-5 md:p-10 mt-2 xl:mt-36 rounded">
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-3 ">
-          <div className="h-96 flex flex-col justify-center ">
-            <p className="md:tracking-widest text-5xl font-bold text-slate-800">
+          <div className="h-28 md:h-48 xl:h-96 flex flex-col justify-center ">
+            <p className="md:tracking-widest text-2xl md:text-5xl font-bold text-slate-800">
               Drop me a line. I would like to hear from you.
             </p>
           </div>
@@ -129,7 +130,7 @@ const Contact = () => {
               <p className="font-bold text-4xl text-red-500">Get in Touch</p>
 
               <input
-                className="border p-1 rounded"
+                className="border p-1 rounded mt-5 xl:mt-0"
                 placeholder="Name"
                 name="user_name"
                 id="user_name"
@@ -141,7 +142,7 @@ const Contact = () => {
               ) : null}
 
               <input
-                className="border p-1 rounded"
+                className="border p-1 rounded mt-3 xl:mt-0"
                 placeholder="Email"
                 name="user_email"
                 id="user_email"
@@ -153,7 +154,7 @@ const Contact = () => {
               ) : null}
 
               <textarea
-                className="border p-1 rounded h-36"
+                className="border p-1 rounded h-36 mt-3 xl:mt-0"
                 placeholder="Message"
                 name="message"
                 id="message"

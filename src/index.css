@@ -78,7 +78,7 @@
   height: 800px;
 } */
 
-@media screen and (max-width: 1220px) {
+@media screen and (max-width: 1280px) {
   .skewed__skills {
     width: 25%;
     transform: skew(0deg) rotate(0deg);
@@ -88,14 +88,21 @@
     margin: 60px;
   }
   .works {
-    width: 75%;
-    height: 475px;
+    width: 35%;
+    height: max-content;
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 750px) {
   .works {
-    width: 80%;
-    height: 210px;
+    width: 70%;
+    height: max-content;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .works {
+    width: 50%;
+    height: max-content;
   }
 }

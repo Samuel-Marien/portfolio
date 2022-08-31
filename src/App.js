@@ -66,13 +66,14 @@ function App() {
           backgroundImage: 'url(images/bgWorks.png)'
         }}
       >
-        <div className="h-screen">
+        {/* <div className="h-screen sm:mb-0 md:mb-36 lg:mb-96 xl:mb-36 2xl:mb-0"> */}
+        <div className="h-max xl:h-screen ">
           <div className="p-2 md:p-0" id="works">
             <Works />
           </div>
         </div>
       </div>
-      <div className="ml-5 lg:ml-48 -translate-y-16">
+      <div className="ml-5 my-10 xl:my-0 xl:ml-48 xl:-translate-y-16  ">
         <ScrollButton mode="Down" href="#contact" />
       </div>
       <div className="h-screen">

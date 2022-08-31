@@ -8,11 +8,11 @@ import { SiTailwindcss } from 'react-icons/si'
 
 function Footer() {
   return (
-    <div className="p-5 bg-slate-900 flex flex-col justify-center items-center">
+    <div className="p-2 lg:p-5 bg-slate-900 flex flex-col justify-center items-center">
       <div>
         <p className="font-semibold text-white">Samuel Marien</p>
       </div>
-      <div className="flex mt-5 text-2xl justify-between w-24 text-slate-500">
+      <div className="flex mt-2 lg:mt-5 text-2xl justify-between w-24 text-slate-500">
         <SocialLink
           icon={<FaGithubSquare />}
           href="https://github.com/Samuel-Marien"
@@ -26,7 +26,7 @@ function Footer() {
           href="https://twitter.com/Samuel_Marien"
         />
       </div>
-      <div className="text-white mt-5">
+      <div className="text-white mt-2 lg:mt-5">
         <p className="text-sm text-white flex items-center">
           Made with ❤️ /{' '}
           <span className="text-2xl ml-1 text-blue-300">{<DiReact />}</span> /{' '}
