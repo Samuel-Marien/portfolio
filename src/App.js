@@ -76,7 +76,7 @@ function App() {
         <ScrollButton mode="Down" href="#contact" />
       </div>
       <div className="h-screen">
-        <div className="p-2 md:p-0" id="contact">
+        <div className="" id="contact">
           <Contact />
         </div>
       </div>
