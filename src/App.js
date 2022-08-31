@@ -7,6 +7,7 @@ import ScrollButton from './components/ScrollButton'
 import About from './components/About'
 import Skills from './components/Skills'
 import Works from './components/Works'
+import Contact from './components/Contact'
 
 function App() {
   return (
@@ -69,6 +70,14 @@ function App() {
           <div className="p-2 md:p-0" id="works">
             <Works />
           </div>
+        </div>
+      </div>
+      <div className="ml-5 lg:ml-48 -translate-y-16">
+        <ScrollButton mode="Down" href="#contact" />
+      </div>
+      <div className="h-screen">
+        <div className="p-2 md:p-0" id="contact">
+          <Contact />
         </div>
       </div>
     </div>
