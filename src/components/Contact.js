@@ -4,6 +4,8 @@ import emailjs from '@emailjs/browser'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 
+import Footer from './Footer'
+
 import { RiMailSendLine } from 'react-icons/ri'
 import { AiFillAlert } from 'react-icons/ai'
 
@@ -96,14 +98,14 @@ const Contact = () => {
         .required('Required')
     }),
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2))
+      // alert(JSON.stringify(values, null, 2))
       sendEmail(JSON.stringify(values, null, 2))
     }
   })
 
   return (
     <div
-      className="h-screen pt-36"
+      className="h-screen flex flex-col justify-between"
       style={{
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -111,7 +113,7 @@ const Contact = () => {
         backgroundImage: 'url(images/bgContact.png)'
       }}
     >
-      <div className="bg-white mx-48 p-10">
+      <div className="bg-white mx-48 p-10 mt-36">
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-3 ">
           <div className="h-96 flex flex-col justify-center ">
             <p className="md:tracking-widest text-5xl font-bold text-slate-800">
@@ -155,7 +157,6 @@ const Contact = () => {
                 placeholder="Message"
                 name="message"
                 id="message"
-                type="textarea"
                 {...formik.getFieldProps('message')}
               />
               {formik.touched.message && formik.errors.message ? (
@@ -166,6 +167,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }
