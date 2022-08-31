@@ -40,12 +40,14 @@ const About = () => {
           text-base lg:w-9/12 md:tracking-widest leading-6 
           md:leading-9 text-justify p-4 md:p-0"
         >
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industrys standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged.
+          Après de nombreuses années dans des secteurs aussi différents que
+          passionnants j’ai décidé de donner un nouveau souffle à ma carrière et
+          d’oser vivre mon rêve : Développeur.
+          <br /> J’ai commencé par une première formation pour un titre de
+          développeur WEB et enchaîné avec une licence d&apos;un an en
+          alternance comme développeur d&apos;application. Passionné avant tout,
+          je réalise de nombreux “side-projects” pour monter en compétence, mais
+          soyons honnête : pour m&apos;amuser aussi !
         </p>
 
         {isVisible && (

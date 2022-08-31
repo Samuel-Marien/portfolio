@@ -1,5 +1,6 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import PropTypes from 'prop-types'
+import { SwitchTransition, CSSTransition } from 'react-transition-group'
 import emailjs from '@emailjs/browser'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
@@ -8,6 +9,7 @@ import Footer from './Footer'
 
 import { RiMailSendLine } from 'react-icons/ri'
 import { AiFillAlert } from 'react-icons/ai'
+import { FaThumbsUp } from 'react-icons/fa'
 
 const MySubmitButton = (props) => {
   const { title, icon, className, iconClass } = props
@@ -35,6 +37,19 @@ MySubmitButton.propTypes = {
   icon: PropTypes.element
 }
 
+const MyValidatedMessage = () => {
+  return (
+    <div className="text-slate-800 font-semibold mt-5">
+      <p className="text-base md:text-xl flex items-baseline">
+        Votre message à été envoyé, Merci.
+        <span className="text-2xl ml-2 ">
+          <FaThumbsUp />
+        </span>
+      </p>
+    </div>
+  )
+}
+
 const MyErrorMessage = (props) => {
   const { errorType } = props
   return (
@@ -57,6 +72,7 @@ MyErrorMessage.propTypes = {
 }
 
 const Contact = () => {
+  const [mailSended, setMailSended] = useState(false)
   const form = useRef()
 
   // Email service
@@ -71,9 +87,11 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text)
+          setMailSended(true)
         },
         (error) => {
           console.log(error.text)
+          setMailSended(false)
         }
       )
   }
@@ -98,9 +116,9 @@ const Contact = () => {
         .email('Invalid email address')
         .required('Required')
     }),
-    onSubmit: (values) => {
-      // alert(JSON.stringify(values, null, 2))
+    onSubmit: (values, { resetForm }) => {
       sendEmail(JSON.stringify(values, null, 2))
+      resetForm()
     }
   })
 
@@ -114,58 +132,81 @@ const Contact = () => {
         backgroundImage: 'url(images/bgContact.png)'
       }}
     >
-      <div className="bg-white mx-5 md:mx-16 lg:mx-48 p-5 md:p-10 mt-2 xl:mt-36 rounded">
+      <div className="bg-white mx-2 md:mx-16 lg:mx-48 p-5 md:p-10 mt-2  xl:mt-36 rounded">
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-3 ">
           <div className="h-28 md:h-48 xl:h-96 flex flex-col justify-center ">
             <p className="md:tracking-widest text-2xl md:text-5xl font-bold text-slate-800">
               Drop me a line. I would like to hear from you.
             </p>
           </div>
-          <div className="">
-            <form
-              className="flex flex-col justify-around h-full"
-              ref={form}
-              onSubmit={formik.handleSubmit}
+
+          <SwitchTransition>
+            <CSSTransition
+              key={mailSended}
+              addEndListener={(node, done) =>
+                node.addEventListener('transitionend', done, false)
+              }
+              classNames="fade"
             >
-              <p className="font-bold text-4xl text-red-500">Get in Touch</p>
+              {mailSended ? (
+                <div className="flex flex-col justify-center items-center ">
+                  <button
+                    onClick={() => setMailSended(false)}
+                    className="mt-16 h-max px-8 py-2 bg-slate-800 hover:bg-slate-500 text-white hover:shadow-lg transition-all duration-500 rounded-lg "
+                  >
+                    Nouveau messsage ?
+                  </button>
+                  <MyValidatedMessage />
+                </div>
+              ) : (
+                <form
+                  className="flex flex-col justify-around h-full"
+                  ref={form}
+                  onSubmit={formik.handleSubmit}
+                >
+                  <p className="font-bold text-4xl text-red-500">
+                    Get in Touch
+                  </p>
+                  <input
+                    className="border p-1 rounded mt-5 xl:mt-0"
+                    placeholder="Nom"
+                    name="user_name"
+                    id="user_name"
+                    type="text"
+                    {...formik.getFieldProps('user_name')}
+                  />
+                  {formik.touched.user_name && formik.errors.user_name ? (
+                    <MyErrorMessage errorType={formik.errors.user_name} />
+                  ) : null}
 
-              <input
-                className="border p-1 rounded mt-5 xl:mt-0"
-                placeholder="Name"
-                name="user_name"
-                id="user_name"
-                type="text"
-                {...formik.getFieldProps('user_name')}
-              />
-              {formik.touched.user_name && formik.errors.user_name ? (
-                <MyErrorMessage errorType={formik.errors.user_name} />
-              ) : null}
+                  <input
+                    className="border p-1 rounded mt-3 xl:mt-0"
+                    placeholder="Email"
+                    name="user_email"
+                    id="user_email"
+                    type="email"
+                    {...formik.getFieldProps('user_email')}
+                  />
+                  {formik.touched.user_email && formik.errors.user_email ? (
+                    <MyErrorMessage errorType={formik.errors.user_email} />
+                  ) : null}
 
-              <input
-                className="border p-1 rounded mt-3 xl:mt-0"
-                placeholder="Email"
-                name="user_email"
-                id="user_email"
-                type="email"
-                {...formik.getFieldProps('user_email')}
-              />
-              {formik.touched.user_email && formik.errors.user_email ? (
-                <MyErrorMessage errorType={formik.errors.user_email} />
-              ) : null}
+                  <textarea
+                    className="border p-1 rounded h-36 mt-3 xl:mt-0"
+                    placeholder="Message"
+                    name="message"
+                    id="message"
+                    {...formik.getFieldProps('message')}
+                  />
+                  {formik.touched.message && formik.errors.message ? (
+                    <MyErrorMessage errorType={formik.errors.message} />
+                  ) : null}
 
-              <textarea
-                className="border p-1 rounded h-36 mt-3 xl:mt-0"
-                placeholder="Message"
-                name="message"
-                id="message"
-                {...formik.getFieldProps('message')}
-              />
-              {formik.touched.message && formik.errors.message ? (
-                <MyErrorMessage errorType={formik.errors.message} />
-              ) : null}
-              <MySubmitButton title="Envoyé" icon={<RiMailSendLine />} />
-            </form>
-          </div>
+                  <MySubmitButton title="Envoyer" icon={<RiMailSendLine />} />
+                </form>
+              )}
+            </CSSTransition>
+          </SwitchTransition>
         </div>
       </div>
       <Footer />

@@ -74,10 +74,6 @@
   }
 }
 
-/* .works {
-  height: 800px;
-} */
-
 @media screen and (max-width: 1280px) {
   .skewed__skills {
     width: 25%;
@@ -105,4 +101,26 @@
     width: 50%;
     height: max-content;
   }
+}
+
+.fade-enter {
+  opacity: 0;
+  transform: translateX(-50%);
+}
+.fade-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+.fade-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+.fade-exit-active {
+  opacity: 0;
+  transform: translateX(-50%);
+}
+
+.fade-enter-active,
+.fade-exit-active {
+  transition: opacity 800ms, transform 500ms;
 }

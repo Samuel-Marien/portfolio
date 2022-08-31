@@ -34,9 +34,12 @@ const Skills = () => {
         </div>
 
         <p className=" text-slate-700 lg:mt-10 text-base md:tracking-widest leading-6 md:leading-9 text-justify p-4 md:p-0">
-          J&apos;aime créer des choses qui vivent sur Internet, que ce soit
-          sites Web, applications ou quoi que ce soit entre les deux. J’aime
-          voir mon imagination prendre forme pour amener mes idées à la vie.
+          J&apos;aime créer des choses qui prennent forme à l&apos;écran, que ce
+          soit sites Web, applications ou quoi que ce soit entre les deux.
+          J’aime voir mon imagination prendre forme, autant que résoudre des
+          casses-têtes exigeants.
+          <br />
+          Mais par-dessus tout, j&apos;aime amener mes idées à la vie.
         </p>
 
         {isVisible && (
