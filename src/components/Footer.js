@@ -8,7 +8,15 @@ import { SiTailwindcss } from 'react-icons/si'
 
 function Footer() {
   return (
-    <div className="p-2 lg:p-5 bg-slate-900 flex flex-col justify-center items-center">
+    <div
+      style={{
+        backgroundSize: '13%',
+        backgroundPosition: 'bottom right',
+        backgroundRepeat: 'no-repeat',
+        backgroundImage: 'url(images/bgFooter.png)'
+      }}
+      className="p-2 lg:p-5 bg-slate-900 flex flex-col justify-center items-center"
+    >
       <div>
         <p className="font-semibold text-white">Samuel Marien</p>
       </div>
