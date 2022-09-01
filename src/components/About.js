@@ -42,12 +42,13 @@ const About = () => {
         >
           Après de nombreuses années dans des secteurs aussi différents que
           passionnants j’ai décidé de donner un nouveau souffle à ma carrière et
-          d’oser vivre mon rêve : Développeur.
-          <br /> J’ai commencé par une première formation pour un titre de
-          développeur WEB et enchaîné avec une licence d&apos;un an en
-          alternance comme développeur d&apos;application. Passionné avant tout,
-          je réalise de nombreux “side-projects” pour monter en compétence, mais
-          soyons honnête : pour m&apos;amuser aussi !
+          d’oser vivre un rêve : Développeur Web. J’ai commencé par une première
+          formation d&apos;un an à l&apos;AFPA pour un titre de développeur
+          Web/Mobile et enchaîné avec une licence d&apos;un an en alternance
+          comme développeur d&apos;applications avec l&apos;école Sup de Vinci.
+          Passionné avant tout, je réalise de nombreux “side-projects” pour
+          monter en compétence, et découvrir de nouveaux outils, mais soyons
+          honnête... pour m&apos;amuser aussi !
         </p>
 
         {isVisible && (

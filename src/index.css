@@ -124,3 +124,25 @@
 .fade-exit-active {
   transition: opacity 800ms, transform 500ms;
 }
+
+.fade2-enter {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.fade2-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+.fade2-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+.fade2-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.fade2-enter-active,
+.fade2-exit-active {
+  transition: opacity 800ms, transform 500ms;
+}

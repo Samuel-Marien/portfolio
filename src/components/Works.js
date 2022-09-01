@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react'
 import PropTypes from 'prop-types'
+import { CSSTransition, SwitchTransition } from 'react-transition-group'
 
 import useOnScreen from '../hooks/useOnScreen'
 import MyIcon from './MyIcon'
@@ -60,12 +61,16 @@ const Works = () => {
       ref={ref}
       className="grid grid-cols-1 xl:grid-cols-2 gap-3 md:gap-1 lg:gap-10"
     >
-      <div className="works rounded-lg mx-auto mt-2 xl:mt-16 xl:ml-16">
-        <img
-          src={myProjects[projectSelected].image}
-          alt="profil"
-          className="grayscale hover:grayscale-0 rounded-lg transition-all duration-500 shadow-xl"
-        />
+      <div className=" works rounded-lg mx-auto mt-2 xl:mt-16 xl:ml-16">
+        <SwitchTransition>
+          <CSSTransition timeout={400} key={projectSelected} classNames="fade2">
+            <img
+              src={myProjects[projectSelected].image}
+              alt="profil"
+              className="grayscale hover:grayscale-0 rounded-lg transition-all duration-500 shadow-xl"
+            />
+          </CSSTransition>
+        </SwitchTransition>
       </div>
       <div className=" md:px-6 mt-2 lg:mt-14 flex flex-col justify-center">
         <div className="text-3xl md:text-4xl font-bold text-red-500 uppercase flex justify-center lg:justify-start">
