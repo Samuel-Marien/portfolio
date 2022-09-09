@@ -135,8 +135,9 @@ const Contact = () => {
       <div className="bg-white mx-2 md:mx-16 lg:mx-48 p-5 md:p-10 mt-2  xl:mt-36 rounded">
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-3 ">
           <div className="h-28 md:h-48 xl:h-96 flex flex-col justify-center ">
-            <p className="md:tracking-widest text-2xl md:text-5xl font-bold text-slate-800">
-              Drop me a line. I would like to hear from you.
+            <p className="md:pr-20 md:tracking-widest text-2xl md:text-4xl font-bold text-slate-800">
+              Envie d’en savoir plus ? Envoyez-moi quelques lignes et parlons-en
+              ☕.
             </p>
           </div>
 

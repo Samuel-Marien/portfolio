@@ -63,7 +63,7 @@ const myProjects = [
     image: acnh,
     title: 'AcnH Ultimate DB',
     description:
-      'Ce projet plus ambitieux que les précédents à pour objectif de fournir un base de données visuel pour les fans d’un célèbre jeu vidéo. On peut rechercher tous les items du jeu et consulter les nombreuses caractéristiques des objets demandées. À terme, les enregistrer dans son espace personnel et ainsi gérer sa collection. L’idée dans la construction de ce projet est de découvrir RedwoodJs, PostgreSQL et GraphQL. Le site est toujours en cours de développement et il reste encore de nombreuses fonctionnalités à ajouter.',
+      'Ce projet plus ambitieux que les précédents à pour objectif de fournir une base de données visuel pour les fans d’un célèbre jeu vidéo. On peut rechercher tous les items du jeu et consulter les nombreuses caractéristiques des objets demandées. À terme, les enregistrer dans son espace personnel et ainsi gérer sa collection. L’idée dans la construction de ce projet est de découvrir RedwoodJs, PostgreSQL et GraphQL. Le site est toujours en cours de développement et il reste encore de nombreuses fonctionnalités à ajouter.',
     linkCode: 'https://github.com/Samuel-Marien/redwood-acnh-DB',
     linkSite: 'https://ayhan-island.netlify.app/',
     techArray: [
