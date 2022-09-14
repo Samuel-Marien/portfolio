@@ -61,7 +61,7 @@ const About = () => {
             fillMode="none"
             iteration={1}
           >
-            <a href={Mypdf} download="CV_Marien_Samuel_FS.pdf">
+            <a href={Mypdf} download="CV_Marien_Samuel.pdf">
               <button
                 ref={ref}
                 className="mt-5 py-2 px-6 bg-slate-800 text-white 
