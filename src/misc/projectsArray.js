@@ -14,7 +14,7 @@ const myProjects = [
     image: iptracker,
     title: 'Ip Tracker',
     description:
-      'Ce projet a pour objectif de situer sur une carte géographique une adresse IP passée en paramètre dans le formulaire. Pour ce faire je fais appelle a deux APIs distinctes : Google map et Ip Registry. Le formulaire accepte uniquement des adresses IP aux bon format. En plus de la géolocalisation, on accède à certaines informations notamment : adresse, type de port, le réseau …',
+      'Ce projet a pour objectif de situer sur une carte géographique une adresse IP passée en paramètre dans le formulaire. Pour ce faire je fais appelle à deux APIs distinctes : Google map et Ip Registry. Le formulaire accepte uniquement des adresses IP au bon format. En plus de la géolocalisation, on accède à certaines informations notamment : adresse, type de port, le réseau …',
     linkCode: 'https://github.com/Samuel-Marien/ip-tracker',
     linkSite: 'https://ip-tracker-dbfta26z5-samuel-marien.vercel.app/',
     techArray: [
@@ -63,7 +63,7 @@ const myProjects = [
     image: acnh,
     title: 'AcnH Ultimate DB',
     description:
-      'Ce projet plus ambitieux que les précédents à pour objectif de fournir une base de données visuel pour les fans d’un célèbre jeu vidéo. On peut rechercher tous les items du jeu et consulter les nombreuses caractéristiques des objets demandées. À terme, les enregistrer dans son espace personnel et ainsi gérer sa collection. L’idée dans la construction de ce projet est de découvrir RedwoodJs, PostgreSQL et GraphQL. Le site est toujours en cours de développement et il reste encore de nombreuses fonctionnalités à ajouter.',
+      'Ce projet plus ambitieux que les précédents a pour objectif de fournir une base de données visuelle pour les fans d’un célèbre jeu vidéo. On peut rechercher tous les items du jeu et consulter les nombreuses caractéristiques des objets demandés. À terme, les enregistrer dans son espace personnel et ainsi gérer sa collection. L’idée dans la construction de ce projet est de découvrir RedwoodJs, PostgreSQL et GraphQL. Le site est toujours en cours de développement et il reste encore de nombreuses fonctionnalités à ajouter.',
     linkCode: 'https://github.com/Samuel-Marien/redwood-acnh-DB',
     linkSite: 'https://ayhan-island.netlify.app/',
     techArray: [
