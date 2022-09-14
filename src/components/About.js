@@ -5,7 +5,7 @@ import useOnScreen from '../hooks/useOnScreen'
 import MyAnimateTitle from './MyAnimateTitle'
 import profil from './assets/profil1.jpg'
 
-import Mypdf from '../CV_Marien_Samuel_FS.pdf'
+import Mypdf from '../CV_Marien_Samuel.pdf'
 
 const About = () => {
   const ref = useRef()
