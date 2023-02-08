@@ -17,7 +17,8 @@ import {
   SiTailwindcss,
   SiNotion,
   SiExpress,
-  SiStyledcomponents
+  SiStyledcomponents,
+  SiPostman
 } from 'react-icons/si'
 import { FaFigma, FaGithub } from 'react-icons/fa'
 import { TbApi, TbBrandJavascript, TbBrandNextjs } from 'react-icons/tb'
@@ -136,6 +137,11 @@ const Skills = () => {
                 <MyIcon
                   icon={<SiNotion />}
                   type="slideInFromBottom"
+                  duration="1800ms"
+                />
+                <MyIcon
+                  icon={<SiPostman />}
+                  type="slideInFromRight"
                   duration="1800ms"
                 />
                 <MyIcon
