@@ -10,13 +10,17 @@ import {
   DiCss3,
   DiNodejsSmall,
   DiReact,
-  DiBootstrap,
   DiPostgresql,
   DiMongodb
 } from 'react-icons/di'
-import { SiTailwindcss, SiNotion, SiExpress } from 'react-icons/si'
+import {
+  SiTailwindcss,
+  SiNotion,
+  SiExpress,
+  SiStyledcomponents
+} from 'react-icons/si'
 import { FaFigma, FaGithub } from 'react-icons/fa'
-import { TbApi, TbBrandJavascript } from 'react-icons/tb'
+import { TbApi, TbBrandJavascript, TbBrandNextjs } from 'react-icons/tb'
 
 const Skills = () => {
   const ref = useRef()
@@ -39,8 +43,8 @@ const Skills = () => {
           J’adore voir mon imagination s’animer sous les clics, autant que
           résoudre des casses-têtes exigeants.
           <br />
-          Voici les outils avec lesquels j’aime particulièrement travailler…
-          pour le moment 🤓.
+          Voici les outils (pour le moment 🤓) avec lesquels j’aime
+          particulièrement travailer.
         </p>
 
         {isVisible && (
@@ -71,14 +75,19 @@ const Skills = () => {
                   duration="1800ms"
                 />
                 <MyIcon
-                  icon={<DiBootstrap />}
+                  icon={<TbBrandNextjs />}
                   type="slideInFromLeft"
-                  duration="500ms"
+                  duration="1200ms"
                 />
                 <MyIcon
                   icon={<SiTailwindcss />}
                   type="slideInFromBottom"
                   duration="800ms"
+                />
+                <MyIcon
+                  icon={<SiStyledcomponents />}
+                  type="slideInFromRight"
+                  duration="400ms"
                 />
               </div>
             </div>

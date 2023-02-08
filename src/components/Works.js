@@ -67,7 +67,7 @@ const Works = () => {
             <img
               src={myProjects[projectSelected].image}
               alt="profil"
-              className="grayscale hover:grayscale-0 rounded-lg transition-all duration-500 shadow-xl"
+              className="rounded-lg shadow-xl"
             />
           </CSSTransition>
         </SwitchTransition>
