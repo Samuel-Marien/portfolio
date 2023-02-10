@@ -99,7 +99,7 @@ const myProjects = [
     image: jobify,
     title: 'JOBIFY track your job search',
     description:
-      'Cette application à été développée pour gérer sa recherche d’emploi. iI est question ici de suivre et de manager ses candidatures à l’aide d’ un dashboard complet et intuitif. Un tableau de données permet de visualiser rapidement son avancée sur les mois écoulés. Avec ce projet j’ai révisé mes classiques règles CSS avec Styled-components. J’ai également mieux explorer NodeJs et MongoDB pour implémenter un CRUD simple et fonctionnel.',
+      'Cette application à été développée pour gérer sa recherche d’emploi. iI est question ici de suivre et de manager ses candidatures à l’aide d’un dashboard complet et intuitif. Un tableau de données permet de visualiser rapidement son avancée sur les mois écoulés. Avec ce projet j’ai révisé mes classiques règles CSS avec Styled-components. J’ai également mieux exploré NodeJs et MongoDB pour implémenter un CRUD simple et fonctionnel.',
     linkCode: 'https://github.com/Samuel-Marien/jobify_Prod',
     linkSite: 'https://jobify-x4gt.onrender.com/landing',
     techArray: [
@@ -123,7 +123,7 @@ const myProjects = [
     image: bkm,
     title: 'BKM - Brooklyn Museum App',
     description:
-      'Ce projet présente les œuvres du muséede Brooklyn, au travers deux canaux : les Collections et les expositions en cours et passées. Tous les ouvrages présentés peuvent être sauvegardés dans son espace personnel. L’objectif au travers cette application full stack est de jouer avec l’API public du musée de brooklyn combiné à  une base de données en MongoDB. Le tout servi en NextJs/Tailwind CSS. L’application est toujours en cours de développement, il me reste mille idées et améliorations à implémenter !',
+      'Ce projet présente les œuvres du musée de Brooklyn, au travers deux canaux : les Collections et les expositions en cours et passées. Tous les ouvrages présentés peuvent être sauvegardés dans son espace personnel. L’objectif au travers cette application full stack est de jouer avec l’API public du musée de brooklyn combiné à une base de données en MongoDB. Le tout servi en NextJs/Tailwind CSS. L’application est toujours en cours de développement, il me reste mille idées et améliorations à implémenter !',
     linkCode: 'https://github.com/Samuel-Marien/museumApp_prod',
     linkSite: 'https://brook-museum.onrender.com/',
     techArray: [
@@ -152,7 +152,7 @@ const myProjects = [
     image: portfolio,
     title: 'Portfolio',
     description:
-      'Ah ! Le portfolio, l’idée assez flagrante du site est de présenter mon travail et de prendre contact 👋. J’ai beaucoup aimé développer cette application et découvrir certaines librairies pour les animations, le design part d’un template sur Figma, un outil avec lequel j’aime particulièrement travaillé.',
+      'Ah ! Le portfolio, l’idée assez flagrante du site est de présenter mon travail et de prendre contact 👋. J’ai beaucoup aimé développer cette application et découvrir certaines librairies pour les animations, le design part d’un template sur Figma, un outil avec lequel j’aime particulièrement travailler.',
     linkCode: 'https://github.com/Samuel-Marien/portfolio',
     linkSite: null,
     techArray: [

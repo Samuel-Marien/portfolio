@@ -41,15 +41,6 @@ function Footer() {
           <span className="text-2xl ml-1 mr-5 text-blue-300">
             {<SiTailwindcss />}
           </span>
-          Designed by{' '}
-          <a
-            className="ml-1 text-blue-300"
-            target="_blank"
-            href="https://www.figma.com/@akhiltj"
-            rel="noreferrer"
-          >
-            Akhil T J
-          </a>
         </p>
       </div>
     </div>

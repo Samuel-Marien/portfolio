@@ -28,8 +28,8 @@ const Skills = () => {
   const isVisible = useOnScreen(ref)
 
   return (
-    <div ref={ref} className="flex flex-col lg:flex-row">
-      <div className="p-1 md:p-10 pl-0  mt-3 md:mt-0 flex flex-col lg:w-7/12">
+    <div ref={ref} className="flex flex-col lg:flex-row mt-40 lg:mt-0">
+      <div className="p-1 md:p-10 pl-0 mt-3 md:mt-0 flex flex-col lg:w-7/12">
         <div className="text-3xl md:text-4xl font-bold text-red-500 uppercase flex justify-center md:justify-start">
           <span>
             {isVisible && (
@@ -51,7 +51,7 @@ const Skills = () => {
         {isVisible && (
           <div className="mt-4 md:mt-10 flex flex-col justify-center items-center">
             <div className="flex flex-col  border rounded-2xl px-0 md:px-8 bg-white">
-              <p className=" mx-auto px-8 md:px-16 w-max text-slate-700 text-center font-black text-2xl bg-white -translate-y-5">
+              <p className="mx-auto px-8 md:px-16 w-max text-slate-700 text-center font-black text-2xl bg-white -translate-y-5">
                 Front-end
               </p>
               <div className="flex">

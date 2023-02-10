@@ -1,5 +1,4 @@
 import React from 'react'
-import './App.css'
 
 import NavBar from './components/NavBar'
 import FastPrez from './components/FastPrez'
@@ -25,13 +24,12 @@ function App() {
       <div className="h-screen">
         <div className="flex flex-col mt-5 ml-5 md:mt-56 md:ml-48">
           <FastPrez />
-          <div className="absolute bottom-5 left-5 lg:left-48 ">
+          <div className="absolute bottom-5 left-5 lg:left-48">
             <ScrollButton mode="Down" href="#about" />
           </div>
         </div>
       </div>
       <div
-        className=""
         style={{
           backgroundSize: '40%',
           backgroundPosition: 'bottom right',
@@ -40,21 +38,21 @@ function App() {
         }}
       >
         <div className="h-screen">
-          <div className="p-2 md:p-0 ml-0 lg:ml-48" id="about">
+          <div className="p-2 ml-0 lg:ml-48" id="about">
             <About />
           </div>
         </div>
-        <div className="ml-5 lg:ml-48 -translate-y-16">
+        <div className="ml-5 lg:ml-48 -translate-y-16 hidden lg:block">
           <ScrollButton mode="Down" href="#skills" />
         </div>
         <div className="h-screen ">
-          <div className="p-2 md:p-0 ml-0 lg:ml-48" id="skills">
+          <div className="p-2 ml-0 lg:ml-48" id="skills">
             <Skills />
             <div className="relative"></div>
           </div>
         </div>
       </div>
-      <div className="ml-5 lg:ml-48 -translate-y-16">
+      <div className="ml-5 lg:ml-48 -translate-y-16 hidden lg:block">
         <ScrollButton mode="Down" href="#works" />
       </div>
       <div
@@ -66,17 +64,16 @@ function App() {
           backgroundImage: 'url(images/bgWorks.png)'
         }}
       >
-        {/* <div className="h-screen sm:mb-0 md:mb-36 lg:mb-96 xl:mb-36 2xl:mb-0"> */}
         <div className="h-max xl:h-screen ">
-          <div className="p-2 md:p-0" id="works">
+          <div className="p-2" id="works">
             <Works />
           </div>
         </div>
       </div>
-      <div className="ml-5 my-10 xl:my-0 xl:ml-48 xl:-translate-y-16  ">
+      <div className=" ml-5 my-10 xl:my-0 xl:ml-48 xl:-translate-y-16 hidden lg:block">
         <ScrollButton mode="Down" href="#contact" />
       </div>
-      <div className="h-screen">
+      <div className="h-screen ">
         <div className="" id="contact">
           <Contact />
         </div>

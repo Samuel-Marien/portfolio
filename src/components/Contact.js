@@ -166,7 +166,7 @@ const Contact = () => {
                   onSubmit={formik.handleSubmit}
                 >
                   <p className="font-bold text-4xl text-red-500">
-                    Get in Touch
+                    👋 Contactez-moi
                   </p>
                   <input
                     className="border p-1 rounded mt-5 xl:mt-0"
