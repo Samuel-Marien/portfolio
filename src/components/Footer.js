@@ -15,7 +15,7 @@ function Footer() {
         backgroundRepeat: 'no-repeat',
         backgroundImage: 'url(images/bgFooter.png)'
       }}
-      className="p-2 lg:p-5 bg-slate-900 flex flex-col justify-center items-center"
+      className="lg:p-5 bg-slate-900 flex flex-col justify-center items-center"
     >
       <div>
         <p className="font-semibold text-white">Samuel Marien</p>
@@ -38,7 +38,7 @@ function Footer() {
         <p className="text-sm text-white flex items-center">
           Made with ❤️ /{' '}
           <span className="text-2xl ml-1 text-blue-300">{<DiReact />}</span> /{' '}
-          <span className="text-2xl ml-1 mr-5 text-blue-300">
+          <span className="text-2xl ml-1 text-blue-300">
             {<SiTailwindcss />}
           </span>
         </p>

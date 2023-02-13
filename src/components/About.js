@@ -37,7 +37,7 @@ const About = () => {
         <p
           ref={ref}
           className="text-slate-700 md:mt-10 
-          text-base lg:w-9/12 md:tracking-widest leading-6 
+          text-base lg:w-9/12 leading-6 
           md:leading-9 text-justify p-4 md:p-0"
         >
           Après de nombreuses années dans des secteurs aussi différents que

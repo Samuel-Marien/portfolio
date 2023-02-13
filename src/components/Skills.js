@@ -38,7 +38,7 @@ const Skills = () => {
           </span>
         </div>
 
-        <p className=" text-slate-700 lg:mt-10 text-base md:tracking-widest leading-6 md:leading-9 text-justify p-4 md:p-0">
+        <p className=" text-slate-700 lg:mt-10 text-base leading-6 md:leading-9 text-justify p-4 md:p-0">
           J&apos;aime créer des choses qui prennent forme à l&apos;écran, que ce
           soit sites Web, applications ou quoi que ce soit entre les deux.
           J’adore voir mon imagination s’animer sous les clics, autant que

@@ -93,7 +93,7 @@ const Works = () => {
           <div className="md:mt-8 font-bold text-slate-500 text-xl">
             {myProjects[projectSelected].title}
           </div>
-          <p className="text-slate-700 text-base lg:w-9/12 md:tracking-widest leading-6 md:leading-9 text-justify mt-2">
+          <p className="text-slate-700 text-base lg:w-9/12 leading-6 md:leading-9 text-justify mt-2">
             {myProjects[projectSelected].description}
           </p>
         </div>
