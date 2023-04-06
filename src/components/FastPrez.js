@@ -11,7 +11,7 @@ const FastPrez = () => {
         <span>Samuel Marien</span>
       </div>
       <p className="mt-5 text-2xl font-semibold tracking-widest">
-        Web Developer - JavaScript Enthusiast
+        Développeur Web
       </p>
       <div className="flex mt-5 text-2xl justify-between w-24">
         <SocialLink

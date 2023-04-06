@@ -11,12 +11,18 @@ import { DiCode } from 'react-icons/di'
 import { IoEarth } from 'react-icons/io5'
 
 const MySelectorButton = (props) => {
-  const { title, onClick } = props
+  const { title, onClick, isFocus } = props
+
+  const focusedStyle = isFocus ? ` focus:bg-white focus:text-slate-500` : ' '
+
   return (
     <button
       onClick={onClick}
-      className="focus:bg-white focus:text-slate-500 cursor-pointer p-0 px-2 md:p-2 
-      md:px-4 font-bold text-base md:text-xl bg-slate-500 text-white shadow rounded-full "
+      className={
+        focusedStyle +
+        ` focus:animate-none animate-pulse cursor-pointer p-0 px-2 md:p-2 
+      md:px-4 font-bold text-base md:text-xl bg-slate-500 text-white shadow rounded-full`
+      }
     >
       {title}
     </button>
@@ -24,7 +30,8 @@ const MySelectorButton = (props) => {
 }
 MySelectorButton.propTypes = {
   title: PropTypes.number,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  isFocus: PropTypes.bool
 }
 
 const MyButton = (props) => {
@@ -85,6 +92,7 @@ const Works = () => {
                 key={index}
                 title={index + 1}
                 onClick={() => setProjectSelected(index)}
+                isFocus={projectSelected === index ? true : false}
               />
             )
           })}
@@ -95,6 +103,15 @@ const Works = () => {
           </div>
           <p className="text-slate-700 text-base lg:w-9/12 leading-6 md:leading-9 text-justify mt-2">
             {myProjects[projectSelected].description}
+            {(projectSelected === 1 || projectSelected === 2) && (
+              <>
+                <br />
+                <span className="text-sm italic text-slate-500">
+                  Patience, l&apos;hébergeur met un peu de temps à lancer
+                  l&apos;app au démarrage :)
+                </span>
+              </>
+            )}
           </p>
         </div>
         <div className="flex flex-col mt-10 border rounded-2xl px-0 md:px-8 bg-white">
